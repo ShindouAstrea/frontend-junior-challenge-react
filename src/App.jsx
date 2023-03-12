@@ -1,18 +1,20 @@
 import React from "react";
 import TodoList from "./components/TodoList";
 import TodoResults from "./components/TodoResults";
-import { Provider } from "react-redux";
-import {store} from "./app/store";
+import {useSelector} from 'react-redux';
+
 import "./App.css";
+import TodoForm from "components/TodoForm";
 
 const App = () => {
+  const todoState = useSelector(state=>state.todos);
+  console.log(todoState);
   return (
     <div className="root">
-      <Provider store={store}>
+      
         <TodoList />
         <TodoResults />
-      </Provider>
-      
+        <TodoForm />
     </div>
   );
 };
