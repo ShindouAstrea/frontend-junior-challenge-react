@@ -1,0 +1,27 @@
+.todo-Form{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+}
+
+.todoInput {
+    border-color: grey;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.todoInput :focus{
+    border-color: red;
+    border-radius: 5px;
+    
+}
+.btn-add{
+    justify-content:center ;
+    height: 40px;
+    margin-left: 5px;
+    font-weight: bold;
+}
