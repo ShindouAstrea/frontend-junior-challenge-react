@@ -7,8 +7,6 @@ import "./App.css";
 import TodoForm from "components/TodoForm";
 
 const App = () => {
-  const todoState = useSelector(state=>state.todos);
-  console.log(todoState);
   return (
     <div className="root">
       
