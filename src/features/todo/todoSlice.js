@@ -1,4 +1,5 @@
 import { createSlice ,createAsyncThunk} from '@reduxjs/toolkit'
+import {serializeArrayObjById,deserialize} from '../../utils/serialization';
 
 export const getTodoList = createAsyncThunk('todos/getTodoList',async()=>{
     const response = await fetch('https://my-json-server.typicode.com/AlvaroArratia/static-todos-api/todos') ;
@@ -10,7 +11,7 @@ export const todoSlice = createSlice({
         {
             "id": 0,
             "label": "Fix an ability to display all tasks",
-            "checked": false
+            "checked": true
         },
         {
             "id": 1,
@@ -38,8 +39,25 @@ export const todoSlice = createSlice({
             "checked": false
         }
     ],
-    reducers: {}
+    reducers: {
+        addTodo:(state,action)=> {
+            state.push(action.payload);
+        },
+        editTodo: (state,action)=> {
+           let array = serializeArrayObjById(state);
+           array[action.payload.id]["checked"] = !action.payload.checked; 
+           array = deserialize(array);
+           state = array ;
+        },
+        removeTodo: (state,action)=> {
+            let array = serializeArrayObjById(state);
+           delete array[action.payload];
+           array = deserialize(array);
+           state = array ;
+        }
+    }
 });
+export const {addTodo, editTodo,removeTodo} = todoSlice.actions;
 export default todoSlice.reducer ;
 
 
