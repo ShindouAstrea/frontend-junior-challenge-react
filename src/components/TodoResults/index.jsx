@@ -9,15 +9,28 @@ const TodoResults = () => {
 const selector = useSelector( state=>state.todos);
 const total = selector.length ;
 let doneCounter = 0 ;
+
  for(let todo of selector){
   if(todo.checked){
     doneCounter++;
   }
  };
- let percentage = (doneCounter / total) * 100 ;
+ let percentage = 0 ;
+ if(total != 0 ){
+  percentage = (doneCounter / total) * 100 ;
+ } 
  if(percentage < 100) percentage = Math.trunc(percentage);
- 
 
+ if(percentage == 0 && total ==0){
+  return(
+    <div className="not-todos">
+      <div style={{justifyContent:"center",alignItems:"center"}}>
+      Looks like you don&apos;t has Todos , Try to add some !
+      </div>
+
+    </div>
+  )
+ }
 
   return (
     <div >
@@ -26,7 +39,7 @@ let doneCounter = 0 ;
 
       </div>
       <h4>Percentage done: </h4>
-      <div className="progressContainer">
+      <div className="progressContainer" >
       
       <div
         className="progress-bar-fill"
