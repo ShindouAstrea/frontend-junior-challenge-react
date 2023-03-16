@@ -9,10 +9,14 @@
   margin-bottom: 10px;
   width: 500px;
 }
-.progress {
-  margin-bottom: 50px;
-  width: 100%;
-  
+.not-todos{
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  margin-bottom: 10px;
 }
 .progressContainer{
   display: flex;
