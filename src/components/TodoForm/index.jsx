@@ -24,17 +24,17 @@ const TodoForm = () =>{
 
 
     return(
-        <form className="todo-form" onSubmit={handleSubmit}>
-            <input
-            id="inputTodo"
-            placeholder=" Enter new to do"
-            className="todoInput"
-            type="text"
-            onChange={handleChange}
-           
-            autoComplete="false"
-            />
-            <button onClick={handleSubmit}className="btn btn-primary btn-add" type="Submit" > ADD TO DO </button>
+        <form onSubmit={handleSubmit}>
+                <input
+                id="inputTodo"
+                placeholder=" Enter new to do"
+                className="todoInput"
+                type="text"
+                onChange={handleChange}
+            
+                autoComplete="false"
+                />
+                <button onClick={handleSubmit}className="btn btn-primary btn-add" type="Submit" > ADD TO DO </button>
         </form>
         
     )

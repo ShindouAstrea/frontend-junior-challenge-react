@@ -1,23 +1,14 @@
-.todo-Form{
-    background-color:aqua ;
+form{
     display: flex;
-    width: 500px;
+    justify-content: space-around;
+
 }
 
-.todoInput {
+.todoInput{
     border-color: grey;
     border-radius: 5px;
-    justify-content: center;
-    height: 40px;
+    text-align: center;
+    height:50px;
+   
 }
-.todoInput :focus{
-    border-color: red;
-    border-radius: 5px;
-    
-}
-.btn-add{
-    justify-content:center ;
-    height: 40px;
-    margin-left: 5px;
-    font-weight: bold;
-}
+
