@@ -19,8 +19,9 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  height: 500px;
-  overflow-y: scroll;
+  height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .no-todos {
