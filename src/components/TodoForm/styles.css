@@ -10,6 +10,8 @@ form{
     text-align: center;
     height:50px;
     margin-right: 10px;
-   
+}
+.btn.btn-primary.btn-add {
+    font-weight: bold;
 }
 
