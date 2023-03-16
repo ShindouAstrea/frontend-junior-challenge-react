@@ -53,7 +53,7 @@ export const todoSlice = createSlice({
             let array = serializeArrayObjById(state);
            delete array[action.payload];
            array = deserialize(array);
-           state = array ;
+           return state = array ;
         }
     }
 });
