@@ -1,6 +1,6 @@
 form{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 
@@ -9,6 +9,7 @@ form{
     border-radius: 5px;
     text-align: center;
     height:50px;
+    margin-right: 10px;
    
 }
 
