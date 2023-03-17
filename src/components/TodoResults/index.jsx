@@ -16,12 +16,12 @@ let doneCounter = 0 ;
   }
  };
  let percentage = 0 ;
- if(total != 0 ){
+ if(total !== 0 ){
   percentage = (doneCounter / total) * 100 ;
  } 
  if(percentage < 100) percentage = Math.trunc(percentage);
 
- if(percentage == 0 && total ==0){
+ if(percentage === 0 && total ===0){
   return(
     <div className="not-todos">
       <div style={{justifyContent:"center",alignItems:"center"}}>
