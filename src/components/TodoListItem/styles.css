@@ -6,7 +6,11 @@
   margin: 0 auto 5px;
   cursor: pointer;
 }
-
+.todo-list-item-tools{
+  display: flex;
+  justify-content: flex-end;
+ 
+}
 .todo-list-item-content {
   border-radius: 4px;
   display: flex;
@@ -24,18 +28,29 @@
 }
 
 .todo-list-item-delete {
-  background: rgb(200, 200, 200);
+  display: flex;
   border: none;
   cursor: pointer;
   width: 24px;
   height: 24px;
-  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
-
+.todo-list-item-edit{
+  display: flex;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
 .todo-list-item-delete:hover {
-  background: rgb(172, 172, 172);
+  
+  transform: scale(1.5);
+  
 }
-
+.todo-list-item-edit:hover{
+  transform: scale(1.5);
+}
 .todo-list-item-checked {
   text-decoration: line-through;
 }

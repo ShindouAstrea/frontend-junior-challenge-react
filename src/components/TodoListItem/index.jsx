@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles.css";
+import {ReactComponent as TrashIcon} from '../../assets/delete-icon.svg';
+import {ReactComponent as EditIcon} from '../../assets/edit-icon.svg';
 
 const TodoListItem = ({  onCheck, checked, onDelete, label }) => {
  
@@ -19,9 +21,11 @@ const TodoListItem = ({  onCheck, checked, onDelete, label }) => {
         />
         <span className={checked ? "todo-list-item-checked" : ""}>{label}</span>
       </div>
-      <button type="button" className="todo-list-item-delete" onClick={onDelete}>
-        x
-      </button>
+      <div className="todo-list-item-tools">
+        <EditIcon onClick={onDelete} className="todo-list-item-edit"/>
+        <TrashIcon onClick={onDelete} className="todo-list-item-delete"/>
+      </div>
+      
     </div>
   );
 }
