@@ -58,23 +58,9 @@ Tambien debes considerar el siguiente funcionamiento:
 - La API es de solo lectura por lo que las peticiones POST, PATCH y DELETE puede que `fallen` realizar acciones sobre `nuevos datos` asi que no te asustes.
 - Para los datos ya creados funcionan todas las peticiones, asi que trabaja las llamadas de forma normal dejando de lado limitación del punto anterior.
 
-### Stack tecnológico
-
-- Es obligatorio el uso de React y Redux, ambas usando hooks. Respecto al resto (estilos, clientes HTTP u otras herramientas que puedas necesitar) ¡sientete libre de utilizar lo que prefieras!
-- Para la implementación de `Redux` puedes usar `Redux Core` o `Redux Toolkit` (recomiendo esta por sobre Core), usa lo que mas te acomode. Tambien hay dos metodos en la carpeta `utils` que quizas te sirvan a la hora de manejar datos `serializados` en el store de Redux (si es que lo implementas con datos serializados).
-- El proyecto soporta `Typescript`, sientete libre de crear nuevos archivos, en caso de necesitarlo, usando este lenguaje.
-
-### Sobre el alcance
-
-- Lo que se evaluará es lo que esta descrito en las instrucciones como lo mínimo esperado. Aún así, si consideras que puedes hacer mejoras en el diseño, codigo o agregar alguna funcionalidad extra que tenga sentido con el desafio, sientete libre de hacerlo. Esto último no es necesario pero hazlo si crees que puede ayudar a hacernos una mejor idea de tus talentos y habilidades.
-
 ## Para correr el proyecto
 
 - Instalar dependencias: `npm install` o `yarn install` si usas yarn.
 - Correr el proyecto: `npm start` o `yarn start`.
 
-## Condiciones de entrega
 
-Sube tu respuesta a un repositorio nuevo con acceso público y compártelo vía mail a aarratia@enerlink.com. El plazo de entrega es hasta este lunes 13 de marzo a las 18:00 horas.
-
-¡Éxito y diviértete!
